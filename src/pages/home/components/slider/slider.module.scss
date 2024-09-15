@@ -1,0 +1,84 @@
+.component {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 15px;
+  .btn {
+    position: relative;
+    border: 2px solid black;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #fff;
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
+  .slider {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 25%);
+    overflow: hidden;
+    .item {
+      width: 100%;
+      text-align: center;
+      border-radius: 8px;
+      margin: 0px 10px;
+      cursor: pointer;
+      transition: opacity 0.5s;
+      &:hover {
+        opacity: 0.8;
+      }
+      .img {
+        border-radius: 10px;
+        width: 100%;
+      }
+      .title {
+        position: relative;
+        bottom: 35px;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
+  .befor {
+    @extend .btn;
+    left: 25px;
+  }
+  .after {
+    @extend .btn;
+    right: 25px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .component {
+    .slider {
+      width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .component {
+    .slider {
+      width: 100%;
+    }
+    .btn {
+      position: relative;
+      border: 1px solid black;
+      font-size: 23px;
+      padding: 5px;
+      border-radius: 50%;
+      background: #fff;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}

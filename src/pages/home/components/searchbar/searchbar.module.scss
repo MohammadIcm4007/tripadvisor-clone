@@ -1,0 +1,128 @@
+.searchbar {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    font-size: 35px;
+    text-align: center;
+  }
+  .types {
+    margin-top: 30px;
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .type {
+      font-size: 18px;
+      padding-bottom: 2px;
+      transition: transform 0.5s;
+      display: flex;
+      align-items: center;
+      &:hover {
+        transform: translateY(-2px);
+      }
+      .icon {
+        font-size: 25px;
+      }
+    }
+    .ontype {
+      @extend .type;
+      border-bottom: 2.3px solid black;
+      transform: translateY(-2px);
+    }
+  }
+  .search {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 800px;
+    border-radius: 30px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    .text {
+      width: 650px;
+      margin-left: 15px;
+    }
+    .searchbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      font-size: 18px;
+      background: #06e895;
+      padding: 10px;
+      height: 100%;
+    }
+  }
+}
+.flight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  .datepicker {
+    width: 180px;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .searchbar {
+    .types {
+      width: 600px;
+    }
+    .search {
+      width: 630px;
+    }
+    .flight {
+      .datepicker {
+        width: 130px;
+        padding: 8px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .searchbar {
+    .types {
+      width: 450px;
+      .type {
+        font-size: 14px;
+        padding-bottom: 1px;
+        margin: 0px 3px;
+        .icon {
+          font-size: 18px;
+        }
+      }
+    }
+    .search {
+      width: 450px;
+      height: 43px;
+    }
+    .title {
+      font-size: 22px;
+    }
+    .flight {
+      .datepicker {
+        font-size: 14px;
+        width: 90px;
+        padding: 8px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0 5px;
+      }
+    }
+  }
+}

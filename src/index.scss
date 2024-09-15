@@ -1,0 +1,22 @@
+@font-face {
+    font-family: vazir;
+    src: url(./assets/fonts/Vazir-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    outline: none;
+    font-family: vazir;
+}
+::-webkit-scrollbar{
+  background: #06e89538;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #06E895;
+}
+::selection{
+    background: #06E895;
+    color: #fff;
+}
