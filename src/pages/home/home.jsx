@@ -1,12 +1,12 @@
 import Bigcard from "../../components/big-card/bigcard";
 import Card from "../../components/card/card";
 import Footer from "../../components/footer/footer";
-import Navbar from "../../components/navbar/navbar";
 import Title from "../../components/title/title";
 import Baner from "./components/baner/baner";
 import Searchbar from "./components/searchbar/searchbar";
 import Slider from "./components/slider/slider";
 import styles from "./home.module.scss";
+import Navbar from "./components/home-navbar/navbar";
 
 function Home() {
   return (

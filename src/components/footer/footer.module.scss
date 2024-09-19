@@ -1,59 +1,85 @@
-.footer{
-    width: 100%;
-    background: #06e89538;
-    margin-top: 40px;
+.footer {
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+  background: #faf1ed;
+  display: flex;
+  justify-content: space-between;
+  .right {
+    width: 30%;
+    margin-top: 20px;
     display: flex;
-    padding: 25px;
-    .icon{
-        .img{
-            width: 60px;
-        }
+    flex-direction: column;
+    margin-right: 50px;
+    .title{
+        margin: 4px 0px;
+        font-size: 20px;
     }
-    .div{
-        margin-left: 20px;
-        .links{
-
-            .link{
-                margin: 0px 10px;
-                font-size: 20px;
-                color: rgb(42, 0, 42);
-            }
-        }
-
-        .text{
-            margin-top: 3px;
-            font-size: 18px;
-        }
+    .line {
+        margin: 1.8px 0px;
+        &:hover{
+            color: rgb(57, 0, 57);
+            text-decoration: underline;
+          }
     }
-}
-
-@media only screen and (max-width: 800px){
-    .footer{
-        width: 100%;
-        background: #06e89538;
-        margin-top: 40px;
+    .icons {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      .icon {
+        font-size: 32px;
+        margin: 0px 5px;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+  .left{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    .towers{
+      margin-top: 20px;
+      margin-left: 50px;
+      display: flex; 
+      .tower{
+        margin: 0px 45px;
         display: flex;
-        padding: 25px;
-        .icon{
-            .img{
-                width: 40px;
+        flex-direction: column;
+        .title{
+          margin: 4px 0px;
+          font-size: 15px;
+      }
+      .line {
+          margin: 2px 0px;
+          font-size: 12px;
+          &:hover{
+              color: rgb(57, 0, 57);
+              text-decoration: underline;
             }
-        }
-        .div{
-            margin-left: 20px;
-            .links{
-    
-                .link{
-                    margin: 0px 6px;
-                    font-size: 17px;
-                    color: rgb(42, 0, 42);
-                }
-            }
-    
-            .text{
-                margin-top: 3px;
-                font-size: 16px;
-            }
-        }
+      }
+      }
     }
+    .iconline{
+      margin-top: 20px;
+      display: flex;
+      margin-left: 70px;
+      .icon{
+        width: 40px;
+        margin-right: 10px;
+      }
+      .links{
+        display: flex;
+        align-items: center;
+        .link{
+          text-decoration: underline;
+          margin: 0px 10px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }

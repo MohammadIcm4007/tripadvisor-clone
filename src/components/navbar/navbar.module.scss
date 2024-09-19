@@ -1,109 +1,39 @@
 .navbar{
-    margin-top: 15px;
-    width: 85%;
+
+}
+.one{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    .icon{
-        width: 200px;
-        cursor: pointer;
+    .img{
+        width: 150px;
     }
-    .links{
-        margin-left: 120px;
+    .search{
         display: flex;
         align-items: center;
-        .menu{
-            margin: 0px 17px;
-        }
-        .title{
-            font-size: 16px;
-        }
-    }
-    .div{
-        .login{
-            border: 1px solid black;
-            padding: 6px 17px;
-            border-radius: 18px;
-            background: #000;
-            color: #fff;
-            font-size: 18px;
-            &:hover{
-                background: #242424;
-            }
-        }
-        .profile{
-            font-size: 40px;
-            cursor: pointer;
-        }
+        border: 0.8px solid rgb(174, 174, 174);
     }
 }
-.modal{
-    width: 100%;
+.links{
+    margin-left: 120px;
     display: flex;
-    flex-direction: column;
-    .miniicon{
-        width: 300px;
-        margin-top: 20px;
-    }
-    .text{
-        text-align: center;
-        font-size: 18px;
-        margin-top: 15px;
-        margin-bottom: 70px;
-    }
-    .google{
-        margin-top: 15px;
-        display: flex;
-        align-items: center;
-        border: 2px solid black;
-        padding: 5px;
-        border-radius: 10px;
-        .icon{
-            font-size: 40px;
-        }
-        &:hover{
-            background: #000;
-            color: #fff;
-        }
-    }
-}
-.menubtn{
-    padding: 5px 10px;
-    border-radius: 20px;
-    &:hover{
-        background: rgb(234, 234, 234);
-    }
-}
-
-@media only screen and (max-width: 1110px){
-    .navbar{
-        width: 95%;
-
-        .links{
-            margin-left: 80px;
-            .menu{
-                margin: 0px 8px;
+    align-items: center;
+    .menu{
+        margin: 0px 17px;
+        .menubtn{
+            padding: 5px 10px;
+            border-radius: 20px;
+            &:hover{
+                background: rgb(234, 234, 234);
+            }
+            .title{
+            font-size: 16px;
             }
         }
-    }
-    
-}
-@media only screen and (max-width: 785px){
-    .navbar{
-        width: 99%;
-        .icon{
-            width: 150px;
-            margin-right: 0px;
-        }
-        .links{
-            margin: 0px;
-            padding: 0%;
-            .menu{
-                margin: 0px;
-            }
-        }
-    }
-    .menubtn{
-        padding: 2px 5px;
+        // .list{
+
+        //     .item{
+
+        //     }
+        // }
     }
 }

@@ -21,13 +21,13 @@
   .slider {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(8, 25%);
+    grid-template-columns: repeat(4, 24%);
     overflow: hidden;
+    gap: 7px;
     .item {
       width: 100%;
       text-align: center;
       border-radius: 8px;
-      margin: 0px 10px;
       cursor: pointer;
       transition: opacity 0.5s;
       &:hover {
@@ -47,7 +47,7 @@
   }
   .befor {
     @extend .btn;
-    left: 25px;
+    left: 15px;
   }
   .after {
     @extend .btn;
@@ -79,6 +79,13 @@
         background: #000;
         color: #fff;
       }
+    }
+    .befor {
+      bottom: 15px;
+    }
+    .after {
+      bottom: 15px;
+      right: 15px;
     }
   }
 }
