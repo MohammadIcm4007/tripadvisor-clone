@@ -1,39 +1,64 @@
-.navbar{
-
+.navbar {
+  padding-top: 10px;
+  background: #fff;
 }
-.one{
+.one {
+  display: flex;
+  align-items: center;
+  .img {
+    width: 188px;
+  }
+  .search {
+    margin-right: 20px;
     display: flex;
     align-items: center;
-    .img{
-        width: 150px;
+    justify-content: space-between;
+    padding: 8px 10px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    .icon {
+      font-size: 25px;
+      cursor: pointer;
     }
-    .search{
-        display: flex;
-        align-items: center;
-        border: 0.8px solid rgb(174, 174, 174);
-    }
+  }
 }
-.links{
-    margin-left: 120px;
-    display: flex;
-    align-items: center;
-    .menu{
-        margin: 0px 17px;
-        .menubtn{
-            padding: 5px 10px;
-            border-radius: 20px;
-            &:hover{
-                background: rgb(234, 234, 234);
-            }
-            .title{
-            font-size: 16px;
-            }
-        }
-        // .list{
-
-        //     .item{
-
-        //     }
-        // }
+.links {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  .menu {
+    margin: 0px 8px;
+    .menubtn {
+      padding: 5px 10px;
+      border-radius: 20px;
+      &:hover {
+        background: rgb(234, 234, 234);
+      }
+      .title {
+        font-size: 16px;
+      }
     }
+    // .list{
+
+    //     .item{
+
+    //     }
+    // }
+  }
+}
+.two {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  cursor: pointer;
+  .tab {
+    margin: 0px 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
 }

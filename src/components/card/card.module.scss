@@ -1,83 +1,83 @@
-.card{
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 190px;
+  border-radius: 20px;
+  background: #06e89538;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s;
+  margin-bottom: 10px;
+  &:hover {
+    box-shadow: none;
+  }
+  .img {
+    height: 95%;
+    border-radius: 10px;
+    transform: rotate(-8deg);
+    margin-left: 20px;
+    transition: transform 0.4s;
+    &:hover {
+      transform: rotate(0deg);
+    }
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    .title {
+      font-size: 20px;
+    }
+    .subtext {
+      color: rgb(103, 103, 103);
+      margin-top: 10px;
+    }
+  }
+  .btn {
+    width: 20%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 190px;
-    border-radius: 20px;
-    background: #06e89538;
-    padding: 10px;
-    margin-top: 60px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition:box-shadow 0.5s ;
-    &:hover{
-        box-shadow: none;
+    justify-content: center;
+    .textbtn {
+      border: 1.5px solid black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
     }
-    .img{
-        height: 95%;
-        border-radius: 10px;
-        transform: rotate(-8deg);
-        margin-left: 20px;
-        transition: transform 0.4s;
-        &:hover{
-            transform: rotate(0deg);
-        }
-    }
-    .text{
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-        .title{
-            font-size: 20px;
-        }
-        .subtext{
-            color: rgb(103, 103, 103);
-            margin-top: 10px;
-        }
-    }
-    .btn{
-        width: 20%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .textbtn{
-            border: 1.5px solid black;
-            padding: 10px;
-            text-align: center;
-            border-radius: 20px;
-            &:hover{
-                background: #000;
-                color: #fff;
-            }
-        }
-    }
+  }
 }
 
-@media only screen and (max-width: 1110px){
-    .card{
-        width: 95%;
+@media only screen and (max-width: 1110px) {
+  .card {
+    width: 95%;
+  }
+  .text {
+    width: 50%;
+    .title {
+      font-size: 16px;
     }
-    .text{
-        width: 50%;
-        .title{
-            font-size: 16px;
-        }
-        .subtext{
-            font-size: 14px;
-        }
+    .subtext {
+      font-size: 14px;
     }
+  }
 }
-@media only screen and (max-width: 790px){
-    .card{
-        width: 100%;
-        border-radius: 0%;
-        box-shadow: none;
-        .btn{
-            font-size: 14px;
-            .textbtn{
-                padding: 15px 3px;
-            }
-        }
+@media only screen and (max-width: 790px) {
+  .card {
+    width: 100%;
+    border-radius: 0%;
+    box-shadow: none;
+    .btn {
+      font-size: 14px;
+      .textbtn {
+        padding: 15px 3px;
+      }
     }
+  }
 }

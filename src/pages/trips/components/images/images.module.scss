@@ -1,0 +1,26 @@
+.component{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    width: 80%;
+    margin-top: 10px;
+    .item{
+        text-align: center;
+        .img{
+            width: 95%;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: opacity 0.1s;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+        .text{
+            font-size: 27px;
+            color: #fff;
+            position: relative;
+            bottom: 42px;
+            right: 35%;
+        }
+    }
+}

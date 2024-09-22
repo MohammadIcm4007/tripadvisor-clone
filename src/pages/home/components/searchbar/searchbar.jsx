@@ -5,7 +5,6 @@ import { RiHomeLine } from "react-icons/ri";
 import { IoFastFoodOutline, IoAirplaneOutline } from "react-icons/io5";
 import { TbHomeDollar } from "react-icons/tb";
 import Inputflight from "../input-flight/input-flight";
-import { Datepicker } from "@ijavad805/react-datepicker";
 
 function Searchbar() {
   const [type, settype] = useState("all");
@@ -109,18 +108,6 @@ function Searchbar() {
         <div className={styles.flight}>
           <Inputflight title="مبدا" />
           <Inputflight title="مقصد" />
-          <Datepicker
-            theme="green"
-            input={
-              <input className={styles.datepicker} placeholder="تاریخ رفت" />
-            }
-          />
-          <Datepicker
-            theme="green"
-            input={
-              <input className={styles.datepicker} placeholder="تاریخ برگشت" />
-            }
-          />
         </div>
       )}
     </div>

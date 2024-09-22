@@ -7,16 +7,7 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.one}>
-        <img
-          className={styles.img}
-          src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
-          alt="logo"
-        />
-        <div className={styles.search}>
-          <CiSearch className={styles.icon} />
-          <input type="text" className={styles.input} placeholder="جستوجو" />
-        </div>
-        <div className={styles.links}>
+      <div className={styles.links}>
           <div className={styles.menu}>
             <Menu>
               <MenuButton className={styles.menubtn}>
@@ -58,8 +49,25 @@ function Navbar() {
             </Menu>
           </div>
         </div>
+        <div className={styles.search}>
+          <input type="text" className={styles.input} placeholder="جستوجو" />
+          <CiSearch className={styles.icon} />
+        </div>
+        <img
+          className={styles.img}
+          src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="logo"
+        />
       </div>
-      <div className={styles.two}></div>
+      <div className={styles.two}>
+        <div className={styles.tab}>هتل</div>
+        <div className={styles.tab}>کار</div>
+        <div className={styles.tab}>رستوران</div>
+        <div className={styles.tab}>پرواز</div>
+        <div className={styles.tab}>خانه ی اجاره ای</div>
+        <div className={styles.tab}>سفر دریایی</div>
+        <div className={styles.tab}>اجاره ی خودرو</div>
+      </div>
     </div>
   );
 }
