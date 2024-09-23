@@ -5,6 +5,7 @@ import Notrips from "./components/no-trips/no-trips";
 import Title from "../../components/title/title";
 import Images from "./components/images/images";
 import Card from "../../components/card/card";
+import Newtrips from "./components/new-trips/newtrips";
 
 
 
@@ -20,6 +21,9 @@ function Trips() {
       />
       <div className={styles.navbar} ><Navbar /></div>
       <Notrips />
+      <div className={styles.newtrips} >
+      <Newtrips />
+      </div>
       <Title title="بهترین مکان ها مخصوص شما" text=" " />
       <Images />
       <br />

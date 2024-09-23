@@ -1,3 +1,4 @@
+import Boxs from "../boxs/boxs";
 import styles from "./no-trips.module.scss";
 
 function Notrips() {
@@ -11,6 +12,8 @@ function Notrips() {
         یا خودتان جستجو کنید. در هر صورت، شما بیش از 8 میلیون نقطه برای کشف
         دارید، با بیش از یک میلیارد مرور و نظر مسافر که شما را راهنمایی می کند.
       </div>
+      <Boxs />
+
     </div>
   );
 }

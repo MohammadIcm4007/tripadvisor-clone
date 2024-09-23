@@ -1,0 +1,23 @@
+.boxs{
+    margin-top: 50px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .text{
+            font-size: 14px;
+            width: 170px;
+            margin-top: 7px;
+            text-align: center;
+        }
+        .icon{
+            font-size: 44px;
+            padding: 7px;
+            border: 1.6px solid rgb(219, 219, 219);
+            border-radius: 50%;
+        }
+    }
+}
