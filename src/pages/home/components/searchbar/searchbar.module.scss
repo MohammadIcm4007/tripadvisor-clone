@@ -64,14 +64,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-  .datepicker {
-    width: 180px;
-    padding: 8px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 5px;
-    text-align: center;
-  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -81,15 +73,6 @@
     }
     .search {
       width: 630px;
-    }
-    .flight {
-      .datepicker {
-        width: 130px;
-        padding: 8px;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 0 3px;
-      }
     }
   }
 }
@@ -113,16 +96,6 @@
     }
     .title {
       font-size: 22px;
-    }
-    .flight {
-      .datepicker {
-        font-size: 14px;
-        width: 90px;
-        padding: 8px;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 0 5px;
-      }
     }
   }
 }
