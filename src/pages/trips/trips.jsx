@@ -7,8 +7,6 @@ import Images from "./components/images/images";
 import Card from "../../components/card/card";
 import Newtrips from "./components/new-trips/newtrips";
 
-
-
 function Trips() {
   return (
     <div className={styles.page}>
@@ -19,10 +17,13 @@ function Trips() {
         text="بهترین شهر های ایران از نظر مجله ی ما در سال 2024"
         textbtn="مطالعه کنید"
       />
-      <div className={styles.navbar} ><Navbar /></div>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
       <Notrips />
-      <div className={styles.newtrips} >
-      <Newtrips />
+      <div className={styles.newtrips}>
+        <img className={styles.img} src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/17/5b/9c/caption.jpg?w=600&h=-1&s=1" alt="pictrue" />
+          <Newtrips />
       </div>
       <Title title="بهترین مکان ها مخصوص شما" text=" " />
       <Images />
@@ -39,7 +40,7 @@ function Trips() {
       <br />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default Trips
+export default Trips;

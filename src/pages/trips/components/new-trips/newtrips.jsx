@@ -19,9 +19,16 @@ function Newtrips() {
 
   return (
     <>
-      <Button ref={btnRef} bg={"#06E895"} _hover={{bg:"#06c47e"}} color={"#fff"} onClick={onOpen}>
-        ایجاد اولین سفر
-      </Button>
+        <Button
+        style={{marginTop:"20px" ,marginBottom:"15px", boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}
+          ref={btnRef}
+          bg={"#06E895"}
+          _hover={{ bg: "#06c47e" }}
+          color={"#fff"}
+          onClick={onOpen}
+        >
+          ایجاد اولین سفر
+        </Button>
       <Drawer
         size={"md"}
         isOpen={isOpen}
@@ -45,11 +52,13 @@ function Newtrips() {
             </div>
           </DrawerBody>
 
-          <DrawerFooter className={styles.footer} >
+          <DrawerFooter className={styles.footer}>
             <Button variant="outline" mr={3} onClick={onClose}>
-              لغو 
+              لغو
             </Button>
-            <Button bg={"#06E895"} _hover={{bg:"#06c47e"}} color={"#fff"}>ایجاد سفر</Button>
+            <Button bg={"#06E895"} _hover={{ bg: "#06c47e" }} color={"#fff"}>
+              ایجاد سفر
+            </Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

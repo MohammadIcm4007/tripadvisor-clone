@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
-import styles from "./error.module.scss";
 
-function Error() {
+export default function Error() {
   return (
-    <div className={styles.page} >
-      <div className={styles.continer} >
-      <div className={styles.title} >Error 404</div>
-      <div className={styles.text} >صفحه ی مورد نظر یافت نشد</div>
-      <Link to="/" className={styles.btn}>رفتن به صفحه ی اصلی</Link>
-      </div>
-    </div>
-  )
+    <>
+      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="text-center">
+          <p className="text-base font-semibold text-green-600">404</p>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            صفحه پیدا نشد
+          </h1>
+          <p className="mt-6 text-base leading-7 text-gray-600">
+            متاسفیم , صفحه ی مورد نظر پیدا نشد , بعدا امتحان کنید
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <Link
+              to="/"
+              className="rounded bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+            >
+              بازگشت به خانه  
+            </Link>
+            <a href="#" className="text-sm font-semibold text-gray-900">
+               اتصال به پشتیبانی <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
-
-export default Error

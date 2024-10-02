@@ -13,13 +13,29 @@
     position: sticky;
     top: 0%;
   }
-  .main{
+  .main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
   }
-  .newtrips{
+  .newtrips {
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
     margin-top: 30px;
+    background: #06e89538;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s;
+    &:hover{
+      box-shadow: none;
+    }
+    .img {
+      width: 100%;
+      border-radius: 20px;
+    }
   }
 }
