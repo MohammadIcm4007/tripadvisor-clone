@@ -27,17 +27,6 @@ function Trips() {
       </div>
       <Title title="بهترین مکان ها مخصوص شما" text=" " />
       <Images />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
     </div>
   );

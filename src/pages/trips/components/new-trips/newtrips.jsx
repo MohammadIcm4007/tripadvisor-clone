@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import styles from "./newtrips.module.scss";
+import { FaPlus } from "react-icons/fa";
 
 function Newtrips() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,16 +20,13 @@ function Newtrips() {
 
   return (
     <>
-        <Button
-        style={{marginTop:"20px" ,marginBottom:"15px", boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}
-          ref={btnRef}
-          bg={"#06E895"}
-          _hover={{ bg: "#06c47e" }}
-          color={"#fff"}
+        <button
+          className={styles.btn}
           onClick={onOpen}
         >
           ایجاد اولین سفر
-        </Button>
+          <FaPlus className="inline ml-3" />
+        </button>
       <Drawer
         size={"md"}
         isOpen={isOpen}
