@@ -1,0 +1,11 @@
+@font-face {
+    font-family: vazir;
+    src: url(/Vazir-Medium.ttf);
+}
+*{
+    font-family: vazir;
+    box-sizing: border-box;
+}
+.datepicker{
+    padding-right: 30px;
+}

@@ -1,7 +1,14 @@
+import Footer from "../../components/footer/footer"
+import Navbar from "../../components/navbar/navbar"
+import SearchHotel from "./search/SearchHotel"
 
 function Hotel() {
   return (
-    <div>Hotel</div>
+    <div>
+      <Navbar />
+      <SearchHotel />
+      <Footer />
+    </div>
   )
 }
 

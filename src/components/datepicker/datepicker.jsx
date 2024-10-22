@@ -1,38 +1,75 @@
-import { useState } from "react";
-import { Box, FormControl } from "@chakra-ui/react";
-import DatePicker from "react-multi-date-picker";
-import persian from "react-date-object/calendars/persian";
-import persian_fa from "react-date-object/locales/persian_fa";
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/style.css";
+import { faIR } from "react-day-picker/locale";
+import { format, getMonth, getYear, startOfMonth } from "date-fns-jalali";
+import styles from "./datepicker.module.css";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+  Button,
+  background,
+} from "@chakra-ui/react";
 
-const MyPersianDatePicker = (props) => {
-  const [selectedDate, setSelectedDate] = useState(null);
+export default function PUDatepicker(props) {
+  const jalaliMonths = [
+    "فروردین",
+    "اردیبهشت",
+    "خرداد",
+    "تیر",
+    "مرداد",
+    "شهریور",
+    "مهر",
+    "آبان",
+    "آذر",
+    "دی",
+    "بهمن",
+    "اسفند",
+  ];
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const jalaliFormatters = {
+    formatCaption: (date) => {
+      const month = getMonth(date);
+      const year = getYear(date);
+      return `${jalaliMonths[month]} ${year}`;
+    },
+    formatDay: (date) => format(date, "d", { locale: faIR }),
+    formatWeekdayName: (date) => format(date, "EEEEEE", { locale: faIR }),
   };
 
-  return (
-    <Box direction="rtl">
-      <FormControl>
-        <DatePicker
-          placeholder={props.placeholder}
-          calendar={persian}
-          locale={persian_fa}
-          onChange={handleDateChange}
-          style={{
-            direction: "rtl",
-            width: "150px",
-            height: "42px",
-            borderRadius: "20px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            border: "none",
-            margin:"0px 5px"
-          }}
-          calendarPosition="bottom-right"
-        />
-      </FormControl>
-    </Box>
-  );
-};
+  const today = new Date();
+  const firstOfMonth = startOfMonth(today);
 
-export default MyPersianDatePicker;
+  return (
+    <>
+      <Popover>
+        <PopoverTrigger>
+          <Button background="#fff" boxShadow="0 4px 8px rgba(0, 0, 0, 0.2)" width={"230px"} borderRadius={"20px"} _hover={{ bg: "white"}} >{props.title}</Button>
+        </PopoverTrigger>
+        <PopoverContent width={"720px"} borderRadius={"20px"}>
+          <PopoverArrow />
+          <PopoverCloseButton />
+          {/* <PopoverHeader>Confirmation!</PopoverHeader> */}
+          <PopoverBody>
+            <DayPicker
+              mode="range"
+              disabled={{ before: today }}
+              numberOfMonths={2}
+              locale={faIR}
+              dir="rtl"
+              formatters={jalaliFormatters}
+              fromDate={firstOfMonth}
+              className={styles.datepicker}
+            />
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
+    </>
+  );
+}
